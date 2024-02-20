@@ -1,6 +1,6 @@
 <div style="display: flex; align-items: center;">
-  <img src="Screenshots/bg_main_logo2.png" alt="PolyclinicApp" width="200"/>
-  <div>
+  <img src="Screenshots/favicon.ico" alt="PolyclinicApp" width="200"/>
+  <div style="width: 50%">
   
   ### PolyclinicApp: Управление медицинскими данными с использованием C#
   
