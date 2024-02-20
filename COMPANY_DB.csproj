@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Avalonia.11.0.9\build\Avalonia.props" Condition="Exists('packages\Avalonia.11.0.9\build\Avalonia.props')" />
+  <Import Project="packages\Avalonia.11.0.5\build\Avalonia.props" Condition="Exists('packages\Avalonia.11.0.5\build\Avalonia.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCFEF28D-E699-4AFB-932E-6A34F4CA10B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>COMPANY_DB</RootNamespace>
+    <AssemblyName>COMPANY_DB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPatientQues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPatientQues.Designer.cs">
+      <DependentUpon>NewPatientQues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametrInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametrInput.Designer.cs">
+      <DependentUpon>ParametrInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosis.Designer.cs">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medication.Designer.cs">
+      <DependentUpon>Medication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicationList.Designer.cs">
+      <DependentUpon>MedicationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="polDataSet.cs">
+      <DependentUpon>polDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="polDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>polDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Questionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Questionnaire.Designer.cs">
+      <DependentUpon>Questionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPolyclinicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPolyclinicForm.Designer.cs">
+      <DependentUpon>MainPolyclinicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PolyclinicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersTable.Designer.cs">
+      <DependentUpon>UsersTable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPatientQues.resx">
+      <DependentUpon>NewPatientQues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametrInput.resx">
+      <DependentUpon>ParametrInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosis.resx">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medication.resx">
+      <DependentUpon>Medication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicationList.resx">
+      <DependentUpon>MedicationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionnaire.resx">
+      <DependentUpon>Questionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPolyclinicForm.resx">
+      <DependentUpon>MainPolyclinicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersTable.resx">
+      <DependentUpon>UsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="polDataSet.xsc">
+      <DependentUpon>polDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="polDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>polDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="polDataSet.xss">
+      <DependentUpon>polDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet.xsc">
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PolyclinicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PolyclinicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PolyclinicDataSet.xss">
+      <DependentUpon>PolyclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\bg3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-table-list-10742322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-file-medical-alt-9856589.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-hospitals-9856648.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-settings-sliders-3917751.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-bell-39172561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-calendar-39172621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-table-list-107423221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-file-medical-alt-98565891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-settings-sliders-39177511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-settings-sliders-3917092.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_w1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-users-3914384.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_main_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_main_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_main_logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_main_logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_bg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-check-3917749 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-check-3917749 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-cross-small-4338828.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-disk-3917773.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-plus-3917757.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-disk-39177731.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-plus-39177571.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-cross-3917759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-angle-left-3916954.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-step-forward-10436103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-angle-right-3916925.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-trash-3917772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-font-step-backward-10436102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle_w_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle_w1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle_w_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-сброс-настроек-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-сброс-настроек-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+    <None Include="Resources\new1.png" />
+    <None Include="Resources\new2.png" />
+    <None Include="Resources\new3.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\new4.png" />
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DocX">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPPlus">
+      <Version>7.0.9</Version>
+    </PackageReference>
+    <PackageReference Include="MicroCom.Runtime">
+      <Version>0.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="ReaLTaiizor">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.AccessControl">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Xml">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
