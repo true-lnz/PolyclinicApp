@@ -39,6 +39,5 @@
 ![Приложение 7](Screenshots/8.png)
 
 #### Связь со мной:
-vk.com/true_lnz
-t.me/lansonz
-
+[Вконтакте](https://vk.com/true_lnz/)
+[Телеграм](https://t.me/lansonz/)
