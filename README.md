@@ -40,6 +40,5 @@
 
 #### Связь со мной:
 vk.com/true_lnz
-
 t.me/lansonz
 
